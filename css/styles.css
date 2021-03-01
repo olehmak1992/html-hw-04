@@ -167,6 +167,10 @@ img {
 /* Header address */
 
 .address-link {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+
   color: var(--primary-text-color);
   font-style: normal;
   font-weight: 500;
@@ -177,7 +181,24 @@ img {
 }
 
 .address-link:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
+}
+
+.address-link::before {
+  content: '';
+  margin-right: 10px;
+}
+
+.evelope-icon::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/envelope.svg);
+}
+
+.phone-icon::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/phone.svg);
 }
 
 .address-link:hover,
@@ -244,6 +265,34 @@ img {
   margin-right: 30px;
 }
 
+.features-list .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+
+.antenna-icon::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.clock-icon::before {
+  background-image: url(../images/clock.svg);
+}
+
+.diagram-icon::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.astronaut-icon::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 /* Обратить внимание на размеры заголовка, почему фонтсайз не унаследуется от боди */
 
 .features-list .title {
@@ -285,7 +334,8 @@ img {
   margin: -15px;
 }
 
-.team-list li {
+.team-item {
+  width: 270px;
   margin: 15px;
 
   text-align: center;
@@ -309,8 +359,84 @@ img {
 }
 
 .team-list p {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
+}
+
+/* Socials */
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.social-item:not(:nth-child(4n + 4)) {
+  margin-right: 10px;
+}
+
+.social-item:nth-child(n + 5) {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.insta-icon {
+  background-image: url(../images/instagram.svg);
+}
+
+.twit-icon {
+  background-image: url(../images/twitter.svg);
+}
+
+.fcb-icon {
+  background-image: url(../images/facebook.svg);
+}
+
+.in-icon {
+  background-image: url(../images/linkedin.svg);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent);
+}
+
+/* Clients */
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients-item {
+  margin: 15px;
+}
+
+.clients-link {
+  display: block;
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent);
 }
 
 /* Portfolio */
@@ -394,8 +520,17 @@ img {
   background-color: var(--secondary-bg-color);
 }
 
-.page-footer a {
+.page-footer .logo {
   color: #fff;
+}
+
+.page-footer .footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-wrapper {
+  margin-right: 70px;
 }
 
 .footer-address {
@@ -415,4 +550,30 @@ img {
   font-style: normal;
   text-decoration: none;
   cursor: pointer;
+}
+
+.join-desc {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.join-list {
+  display: flex;
+}
+
+.join-item .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-item:not(:nth-child(4n + 4)) {
+  margin-right: 10px;
+}
+
+.join-item .social-link:hover,
+.join-item .social-link:focus {
+  background-color: var(--accent);
 }
