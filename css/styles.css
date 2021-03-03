@@ -184,26 +184,18 @@ img {
   margin-right: 30px;
 }
 
-.address-link::before {
-  content: '';
+.address-icon {
   margin-right: 10px;
-}
-
-.evelope-icon::before {
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/envelope.svg);
-}
-
-.phone-icon::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/phone.svg);
 }
 
 .address-link:hover,
 .address-link:focus {
   color: var(--accent);
+}
+
+.address-link:hover .address-icon,
+.address-link:focus .address-icon {
+  --color3: var(--accent);
 }
 
 /* Hero */
@@ -265,32 +257,15 @@ img {
   margin-right: 30px;
 }
 
-.features-list .item::before {
-  content: '';
-  display: block;
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 30px;
 
   background-color: #f5f4fa;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 4px;
-}
-
-.antenna-icon::before {
-  background-image: url(../images/antenna.svg);
-}
-
-.clock-icon::before {
-  background-image: url(../images/clock.svg);
-}
-
-.diagram-icon::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.astronaut-icon::before {
-  background-image: url(../images/astronaut.svg);
 }
 
 /* Обратить внимание на размеры заголовка, почему фонтсайз не унаследуется от боди */
@@ -383,34 +358,28 @@ img {
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
 
   border-radius: 50%;
   background-position: center;
-  background-repeat: no-repeat;
-}
-
-.insta-icon {
-  background-image: url(../images/instagram.svg);
-}
-
-.twit-icon {
-  background-image: url(../images/twitter.svg);
-}
-
-.fcb-icon {
-  background-image: url(../images/facebook.svg);
-}
-
-.in-icon {
-  background-image: url(../images/linkedin.svg);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent);
+}
+
+.social-icon {
+  fill: #afb1b8;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #fff;
 }
 
 /* Clients */
@@ -426,7 +395,9 @@ img {
 }
 
 .clients-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
 
@@ -434,9 +405,18 @@ img {
   border-radius: 4px;
 }
 
+.clients-logo {
+  fill: #afb1b8;
+}
+
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent);
+}
+
+.clients-link:hover .clients-logo,
+.clients-link:focus .clients-logo {
+  fill: var(--accent);
 }
 
 /* Portfolio */
@@ -576,4 +556,8 @@ img {
 .join-item .social-link:hover,
 .join-item .social-link:focus {
   background-color: var(--accent);
+}
+
+.join-item .social-icon {
+  fill: #fff;
 }
